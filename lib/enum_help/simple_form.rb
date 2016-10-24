@@ -77,5 +77,6 @@ SimpleForm::FormBuilder.class_eval do
   map_type :enum_radio_buttons, :to => EnumHelp::SimpleForm::EnumRadioButtons
   alias_method :collection_enum_radio_buttons, :collection_radio_buttons
   alias_method :collection_enum, :collection_select
-  alias_method_chain :default_input_type, :enum
+  alias_method :default_input_type_without_enum, :default_input_type
+  alias_method :default_input_type, :default_input_type_with_enum
 end
